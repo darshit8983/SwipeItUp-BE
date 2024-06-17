@@ -8,7 +8,7 @@ import java.util.Map;
 
 @Data
 public class Activity {
-    private String id;
+    private String activityId;
     private HashMap<Tile, Integer> tileLikesCountMap;
     private int numPlayers;
 

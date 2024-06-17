@@ -10,15 +10,15 @@
     <relativePath />
   </parent>
 
-  <groupId>com.pareda.truecaller</groupId>
-  <artifactId>truecaller</artifactId>
+  <groupId>com.swipe</groupId>
+  <artifactId>swipeitup</artifactId>
   <version>HEAD-SNAPSHOT</version>
 
   <packaging>jar</packaging>
-  <name>true-caller</name>
+  <name>swipe-it-up</name>
 
 
-  <description>TrueCaller</description>
+  <description>Swipe It Up</description>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
