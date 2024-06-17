@@ -1,6 +1,5 @@
 package com.swipe;
 
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -11,7 +10,3 @@ public class Main {
 	}
 }
 
-
-
-//order management system -> save order that user has selected, with spring boot.
-// order repo -> save(order)   -> return backs the order
