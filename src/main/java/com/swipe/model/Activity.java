@@ -1,23 +1,22 @@
 package com.swipe.model;
 
+import lombok.Builder;
 import lombok.Data;
 
-import java.util.HashMap;
-import java.util.Map;
+import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
+import java.util.UUID;
+import java.util.concurrent.ConcurrentHashMap;
 
 
 @Data
+@Builder
 public class Activity {
-    private String activityId;
-    private HashMap<Tile, Integer> tileLikesCountMap;
-    private int numPlayers;
+    @Id
+    private UUID activityId;
 
-    private Tile getWinnerTile() {
-        for (Map.Entry<Tile, Integer> entry : tileLikesCountMap.entrySet()) {
-            if (entry.getValue() == numPlayers) {
-                return entry.getKey();
-            }
-        }
-        return null;
-    }
+    @NotNull
+    private String roomId;
+
+    private ConcurrentHashMap<String, Integer> tileLikesCountMap;
 }
