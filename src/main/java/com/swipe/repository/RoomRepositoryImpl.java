@@ -11,9 +11,9 @@ import java.util.concurrent.ConcurrentHashMap;
 public class RoomRepositoryImpl implements RoomRepository {
     Map<UUID, Room> roomMap = new ConcurrentHashMap<>();
 
-    public Room findRoomByRoomCode(int roomCode) {
+    public Room findRoomByRoomCode(String roomCode) {
         return roomMap.values().stream()
-                .filter(room -> room.getRoomCode() == roomCode)
+                .filter(room -> room.getRoomCode().equals(roomCode))
                 .findFirst()
                 .orElse(null);
     }

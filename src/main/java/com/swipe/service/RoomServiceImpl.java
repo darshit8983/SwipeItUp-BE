@@ -21,7 +21,7 @@ public class RoomServiceImpl implements RoomService {
     @Autowired
     MemberRepository memberRepository;
 
-    public Room getRoom(int roomCode) {
+    public Room getRoom(String roomCode) {
         Room room = roomRepository.findRoomByRoomCode(roomCode);
 
         if (ObjectUtils.isEmpty(room)) {
@@ -32,7 +32,7 @@ public class RoomServiceImpl implements RoomService {
     }
 
     public Room createRoom(Member member) {
-        int roomId = IdGenerator.generateUniqueId();
+        String roomId = IdGenerator.generateUniqueId();
 
         Room.RoomBuilder roomBuilder = Room.builder();
         roomBuilder.roomCode(roomId);

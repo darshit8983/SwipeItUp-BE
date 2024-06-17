@@ -20,7 +20,7 @@ public class RoomController {
     private RoomService roomService;
 
     @GetMapping("/{roomCode}")
-    public Room getRoomDetails(@PathVariable("roomCode") int roomCode) {
+    public Room getRoomDetails(@PathVariable("roomCode") String roomCode) {
         return roomService.getRoom(roomCode);
     }
 

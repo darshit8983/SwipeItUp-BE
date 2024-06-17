@@ -8,7 +8,7 @@ import java.util.UUID;
 
 public interface RoomService {
 
-    Room getRoom(int roomCode);
+    Room getRoom(String roomCode);
 
     Room createRoom(Member member);
 

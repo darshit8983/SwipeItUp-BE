@@ -9,7 +9,7 @@ public class IdGenerator {
     private static final AtomicInteger counter = new AtomicInteger(0);
     private static final int MAX_COUNTER = 9999;
 
-    public static int generateUniqueId() {
+    public static String generateUniqueId() {
         long currentTimestamp = Instant.now().getEpochSecond();
 
         int currentCounter = counter.getAndIncrement();
@@ -22,6 +22,6 @@ public class IdGenerator {
 
         String uniqueIdString = String.valueOf(uniqueValue);
 
-        return Integer.parseInt(uniqueIdString.substring(uniqueIdString.length() - 4));
+        return uniqueIdString.substring(uniqueIdString.length() - 4);
     }
 }

@@ -7,7 +7,7 @@ import java.util.UUID;
 
 public interface RoomRepository {
 
-    Room findRoomByRoomCode(int roomCode);
+    Room findRoomByRoomCode(String roomCode);
 
     Room save(Room room);
 

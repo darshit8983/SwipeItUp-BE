@@ -11,7 +11,7 @@ import java.util.UUID;
 @Builder(toBuilder = true)
 public class Room {
     private UUID roomId;
-    private int roomCode;
+    private String roomCode;
     @Singular
     private List<Member> members;
     private UUID adminMember;
