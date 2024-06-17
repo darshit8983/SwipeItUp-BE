@@ -1,14 +1,9 @@
-package com.pareda.truecaller.controller;
+package com.swipe.controller;
 
-import com.pareda.truecaller.model.response.UserResponse;
-import com.pareda.truecaller.util.GlobalConstant;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import static com.pareda.truecaller.util.GlobalConstant.BASE_API_PATH_V1;
 
 /**
  *

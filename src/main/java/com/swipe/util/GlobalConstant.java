@@ -1,4 +1,4 @@
-package com.pareda.truecaller.util;
+package com.swipe.util;
 
 public class GlobalConstant {
 

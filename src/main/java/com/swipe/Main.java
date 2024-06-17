@@ -1,4 +1,4 @@
-package com.pareda.truecaller;
+package com.swipe;
 
 /**
  * True caller performs below functionality

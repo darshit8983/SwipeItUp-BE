@@ -78,7 +78,7 @@
               <manifest>
                 <addClasspath>true</addClasspath>
                 <classpathPrefix>lib/</classpathPrefix>
-                <mainClass>com.pareda.truecaller.Main</mainClass>
+                <mainClass>com.swipe.Main</mainClass>
               </manifest>
             </archive>
           </configuration>

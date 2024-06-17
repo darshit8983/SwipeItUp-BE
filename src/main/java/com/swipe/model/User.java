@@ -1,4 +1,4 @@
-package com.pareda.truecaller.model;
+package com.swipe.model;
 
 import lombok.Data;
 
