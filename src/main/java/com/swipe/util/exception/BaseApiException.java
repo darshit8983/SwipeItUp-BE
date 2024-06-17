@@ -1,15 +1,16 @@
 package com.swipe.util.exception;
 
-public class BaseApiException extends RuntimeException{
+import org.springframework.http.HttpStatus;
+import org.springframework.web.server.ResponseStatusException;
 
-    String msg;
-    Throwable clause;
+public class BaseApiException extends ResponseStatusException {
 
-    public BaseApiException() {
-        super();
+
+    public BaseApiException(HttpStatus status, String msg) {
+        super(status, msg);
     }
 
-    public BaseApiException(String msg, Throwable clause) {
-        super(msg,clause);
+    public BaseApiException(HttpStatus httpStatus, String msg, Throwable clause) {
+        super(httpStatus,msg,clause);
     }
 }
