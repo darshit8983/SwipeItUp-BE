@@ -8,26 +8,24 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import javax.websocket.server.PathParam;
-
-import java.util.UUID;
+import javax.validation.constraints.NotNull;
 
 import static com.swipe.util.GlobalConstant.BASE_API_PATH_V1;
 
-@RestController(BASE_API_PATH_V1)
-@RequestMapping("/rooms")
+@RestController
+@RequestMapping(BASE_API_PATH_V1 + "/rooms")
 public class RoomController {
 
     @Autowired
     private RoomService roomService;
 
     @GetMapping("/{roomCode}")
-    public Room getRoomDetails(@PathParam("roomCode") int roomCode) {
+    public Room getRoomDetails(@PathVariable("roomCode") int roomCode) {
         return roomService.getRoom(roomCode);
     }
 
     @PostMapping()
-    public Room createRoom(Member member) {
+    public Room createRoom(@NotNull Member member) {
         return roomService.createRoom(member);
     }
 

@@ -4,6 +4,7 @@ import com.swipe.model.Room;
 
 import java.util.UUID;
 
+
 public interface RoomRepository {
 
     Room findRoomByRoomCode(int roomCode);

@@ -7,4 +7,6 @@ import java.util.UUID;
 public interface MemberRepository {
 
     Member findById(UUID memberId);
+
+    Member save(Member member);
 }

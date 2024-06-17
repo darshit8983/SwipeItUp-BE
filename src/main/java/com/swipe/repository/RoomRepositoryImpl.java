@@ -1,11 +1,13 @@
 package com.swipe.repository;
 
 import com.swipe.model.Room;
+import org.springframework.stereotype.Repository;
 
 import java.util.Map;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 
+@Repository
 public class RoomRepositoryImpl implements RoomRepository {
     Map<UUID, Room> roomMap = new ConcurrentHashMap<>();
 
