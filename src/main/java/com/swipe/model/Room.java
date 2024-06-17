@@ -2,13 +2,17 @@ package com.swipe.model;
 
 import lombok.Builder;
 import lombok.Data;
+import lombok.Singular;
 
 import java.util.List;
+import java.util.UUID;
 
 @Data
-@Builder
+@Builder(toBuilder = true)
 public class Room {
-    private String roomId;
+    private UUID roomId;
     private int roomCode;
+    @Singular
     private List<Member> members;
+    private UUID adminMember;
 }
